@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>青岛胶东临空区智慧园区综合管理平台</title>
+
+    <!-- 新的加载shp文件不得行 -->
+    <!-- <script src="http://cim.bochao.com.cn:8000/1127/BcEngineX.js"></script> -->
+
+    <!-- 老的 -->
+    <script src="http://cim.bochao.com.cn:8000/1113/BcEngineX.js"></script>
+    <script src="<%= BASE_URL %>BcEngineX/SkyBoxOnGround.js"></script>
+    <script src="<%= BASE_URL %>js/bcPlugin.js"></script>
+    <script>
+      let cimUrl = 'http://'+document.domain+':26601';
+      // let cimUrl = 'http://cim.bochao.com.cn:26601';
+      // let cimUrl = 'http://192.168.1.5:26601';
+      let applyLogin = cimUrl + '/projectReport?name=js';
+      let auditLogin = cimUrl + '/Handover?name=zjw';
+      let auditDetail= cimUrl + '/Accept?name=zjw';
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
+
